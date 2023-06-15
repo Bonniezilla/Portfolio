@@ -2,7 +2,7 @@ import { IncrementalCache } from "next/dist/server/lib/incremental-cache";
 
 export default function About() {
   const icons = [
-    { name: "github", href: "https://github/Bonniezilla" },
+    { name: "github", href: "https://github.com/Bonniezilla" },
     { name: "document", href: undefined },
   ];
 
