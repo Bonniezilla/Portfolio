@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useRef } from "react";
+import { useEffect, useState, useRef } from "react";
 import { useInView } from 'react-intersection-observer';
 
 const Projects = () => {
@@ -21,6 +21,7 @@ const Projects = () => {
         },
     ]
 
+    const [ isVisible, setIsVisible ] = useState(false);
     const { ref, inView } = useInView({
         triggerOnce: true,
     });
@@ -28,11 +29,18 @@ const Projects = () => {
 
     useEffect(() => {
         if (inView) {
+            setIsVisible(true);
+        }
+    }, [inView]);
+    
+    useEffect(() => {
+        if (isVisible) {
             titleRefs.current.map((ref, index) => {
                 titleRefs.current[index].classList.remove('invisible')
             })
         }
-    }, [inView]);
+    });
+
 
     return (
         <section className="h-screen w-screen bg-white flex justify-between items-center 
@@ -41,8 +49,8 @@ const Projects = () => {
                 <div ref={ref}
                     className="bg-slate-700 flex flex-col border-purple-500 border-solid
             border-2 h-5/6 w-full rounded-xl p-12 justify-between items-center">
-                    <h1 ref={(el) => (titleRefs.current[index] = el)} 
-                    className="text-white text-3xl
+                    <h1 ref={(el) => (titleRefs.current[index] = el)}
+                        className="text-white text-3xl
                     animate-text-entry-3 invisible">{project.title}</h1>
                     <div className="h-3/5 text-center bg-slate-800 border-2 border-white rounded-lg
               w-5/6 p-6">

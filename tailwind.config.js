@@ -23,7 +23,7 @@ module.exports = {
       },
       keyframes: {
         "text-entry": {
-          '0%': { transform: 'translateX(-1em)', opacity: '10%' }, 
+          '0%': { transform: 'translateX(-1em)', opacity: '0%' }, 
           '50%': { opacity: '50%' },
           '100%': { transform: 'translateX(0)' },
         },
