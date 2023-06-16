@@ -1,5 +1,3 @@
-import { IncrementalCache } from "next/dist/server/lib/incremental-cache";
-
 export default function About() {
   const icons = [
     { name: "github", href: "https://github.com/Bonniezilla" },
@@ -8,7 +6,7 @@ export default function About() {
 
   return (
     <section className="bg-slate-950 bg-gradient-radial 
-        from-purple-900 to-purple-950 w-full h-screen-4/5
+        from-purple-900 to-purple-950 w-full h-screen-5/6
         flex items-center justify-center flex-col bg-repeat shadow-2xl">
       <span className="p-6 flex flex-col justify-around">
         <h2 className="text-purple-500/90 text-4xl font-bold

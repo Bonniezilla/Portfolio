@@ -15,6 +15,11 @@ module.exports = {
         'screen-2/5': '40vh',
         'screen-3/5': '60vh',
         'screen-4/5': '80vh',
+        'screen-1/6': '16.66vh',
+        'screen-2/6': '33.32vh',
+        'screen-3/6': '49.98vh',
+        'screen-4/6': '66.64vh',
+        'screen-5/6': '83.3vh',
       },
       keyframes: {
         "text-entry": {
