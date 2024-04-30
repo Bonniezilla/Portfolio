@@ -1,7 +1,7 @@
 export default function About() {
   const icons = [
     { name: "github", href: "https://github.com/Bonniezilla" },
-    { name: "document", href: undefined },
+    { name: "document", href: "/Currículo.pdf"},
   ];
 
   return (
