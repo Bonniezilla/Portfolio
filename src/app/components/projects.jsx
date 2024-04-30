@@ -9,8 +9,8 @@ const Projects = () => {
             id: 1,
             content: 'peaceword',
             title: 'PeaceWord',
-            url: 'https://better-passwordgenerator.onrender.com',
-            github: 'https://github.com/Bonniezilla/passwordgenerator'
+            url: 'https://peace-word.vercel.app',
+            github: 'https://github.com/Bonniezilla/peace-word-react-app'
         },
         {
             id: 2,
