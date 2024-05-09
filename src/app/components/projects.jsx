@@ -10,12 +10,12 @@ const Projects = () => {
             content: 'peaceword',
             title: 'PeaceWord',
             url: 'https://peace-word.vercel.app',
-            github: 'https://github.com/Bonniezilla/peace-word-react-app'
+            github: 'https://github.com/Bonniezilla/peace-word-react-app',
         },
         {
             id: 2,
-            content: 'secondproject',
-            title: 'Second Project',
+            content: 'siteadvogada',
+            title: 'Site Profissional de Advogada',
             url: 'project2.com',
             github: 'https://github.com/Bonniezilla/'
         },
@@ -47,25 +47,21 @@ const Projects = () => {
         p-12 gap-12">
             {projects.map((project, index) => (
                 <div ref={ref}
-                    className="bg-slate-700 flex flex-col border-purple-500 border-solid
-            border-2 h-5/6 w-full rounded-xl p-12 justify-between items-center">
+                    className="bg-slate-800 flex flex-col border-purple-800 border-solid
+            border-8 h-5/6 w-full rounded-lg p-12 justify-between items-center gap-4">
                     <h1 ref={(el) => (titleRefs.current[index] = el)}
                         className="text-white text-3xl
                     animate-text-entry-3 invisible">{project.title}</h1>
-                    <div className="h-3/5 text-center bg-slate-800 border-2 border-white rounded-lg
-              w-5/6 p-6">
-                        <img src={'/' + project.content} />
+                    <div className="h-full text-center bg-slate-800 rounded-lg w-full">
+                        <img src={'/images/' + project.content + ".png"} 
+                        className="project-image"/>
                     </div>
+                    <div className="flex w-full justify-around px-12">
                     <a href={project.url} target="_blank"
-                        className="bg-white border-2 border-slate-800 rounded-sm w-2/5 
-              flex items-center text-slate-800
-              justify-center hover:bg-slate-800 hover:border-white 
-              hover:text-white duration-300">Project</a>
+                        className="project-icon"><img src="/icons/url.png" className="w-full invert hover:opacity-50 duration-500"/></a>
                     <a href={project.github} target="_blank"
-                        className="bg-slate-800 border-2 border-white rounded-sm w-2/5 
-              flex items-center text-white
-              justify-center hover:bg-white hover:border-slate-800 
-              hover:text-slate-800 duration-300">Github</a>
+                    className="project-icon"><img src="/icons/github.png" className="w-full brightness-200 hover:opacity-50 duration-500"/></a>
+                    </div>
                 </div>
             ))}
         </section>

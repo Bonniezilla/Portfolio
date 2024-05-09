@@ -18,7 +18,8 @@ export default function About() {
             </span>
             {icons.map((icon, index) => (
               <a href={icon.href}
-                className={`"flex items-center justify-center animate-icon-entry-${index + 1}"`}><img src={"/" + icon.name + ".png"}
+                target="_blank"
+                className={`"flex items-center justify-center animate-icon-entry-${index + 1}"`}><img src={"/icons/" + icon.name + ".png"}
                   className={"text-white w-16 hover:duration-300 hover:opacity-50 hover:-translate-y-2 hover:-translate-x-2"}/>
               </a>
             ))}
@@ -30,7 +31,7 @@ export default function About() {
         <p className="text-white text-2xl self-end text-end animate-text-entry-invert-2">
           Tenho 18 anos sou desenvolvedor
           <br />
-          fullstack com
+          Front-end com
           1 ano de experiencia
           <br />
           trabalhando como freelancer.

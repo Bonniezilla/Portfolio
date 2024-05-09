@@ -1,3 +1,12 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.project-image {
+    image-rendering: optimizeQuality;
+    @apply w-full h-full rounded-lg border-4 border-purple-700;
+}
+
+.project-icon {
+    @apply rounded-full w-14 flex items-center justify-between duration-300;
+}
