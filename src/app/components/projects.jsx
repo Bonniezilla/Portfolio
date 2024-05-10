@@ -8,14 +8,14 @@ const Projects = () => {
         {
             id: 1,
             content: 'peaceword',
-            title: 'PeaceWord',
+            title: 'PEACEWORD',
             url: 'https://peace-word.vercel.app',
             github: 'https://github.com/Bonniezilla/peace-word-react-app',
         },
         {
             id: 2,
             content: 'siteadvogada',
-            title: 'Site Profissional de Advogada',
+            title: 'SITE PROFISSIONAL DE ADVOGADA',
             url: 'project2.com',
             github: 'https://github.com/Bonniezilla/'
         },
@@ -43,14 +43,15 @@ const Projects = () => {
 
 
     return (
-        <section className="h-screen w-screen bg-white flex justify-between items-center 
-        p-12 gap-12">
+        <section className="h-full w-screen bg-white flex flex-col justify-between items-center 
+        p-20 gap-24">
+            <h1 className="font-bold text-slate-800 text-7xl">PROJETOS</h1>
             {projects.map((project, index) => (
                 <div ref={ref}
                     className="bg-slate-800 flex flex-col border-purple-800 border-solid
-            border-8 h-5/6 w-full rounded-lg p-12 justify-between items-center gap-4">
+            border-8 h-full w-4/6 rounded-lg p-12 justify-between items-center gap-12">
                     <h1 ref={(el) => (titleRefs.current[index] = el)}
-                        className="text-white text-3xl
+                        className="text-white text-5xl font-bold
                     animate-text-entry-3 invisible">{project.title}</h1>
                     <div className="h-full text-center bg-slate-800 rounded-lg w-full">
                         <img src={'/images/' + project.content + ".png"} 
